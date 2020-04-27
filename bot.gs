@@ -104,18 +104,18 @@ function getWeatherEmoji (weather) {
 
 // Slackにメッセージを送る
 function sendToSlack (text1, text2, emoji) {
- const jsonData = {
-   'icon_emoji': emoji,
-   'text': text1,
-   'attachments': [
-     { 'text': text2 }
-   ]
- }
- const payload = JSON.stringify(jsonData)
- const options = {
+  const jsonData = {
+    'icon_emoji': emoji,
+    'text':       text1,
+    'attachments': [
+      { 'text': text2 }
+    ]
+  }
+  const payload = JSON.stringify(jsonData)
+  const options = {
     'method':      'post',
     'contentType': 'application/json',
     'payload':     payload
- }
- UrlFetchApp.fetch(webhookUrl, options);
+  }
+  UrlFetchApp.fetch(webhookUrl, options);
 }
