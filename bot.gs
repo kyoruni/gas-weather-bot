@@ -99,7 +99,6 @@ function getWeatherEmoji (weather) {
       }
       break
   }
-  console.log(emoji)
   return emoji
 }
 
